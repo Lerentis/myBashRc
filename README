@@ -42,3 +42,4 @@ added alias:
 	alias grep='grep --color=auto'
 	alias cpuinfo='lscpu'
 	alias burntbunch='ssh burntbunch.org'
+	alias push='git push'

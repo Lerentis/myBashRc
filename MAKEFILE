@@ -1,4 +1,4 @@
-BIN="/usr/bin"
+HOME_DIR=$(HOME)
 
 help:
 	@echo "bashrc" makefile
@@ -24,10 +24,11 @@ backup:
 
 install:
 	@echo "Copying config files to $(HOME)..."
-	@/bin/cp -f bashrc          	$(HOME)/.bashrc
-	@/bin/cp -f .shell/exports    	$(HOME)/.shell/exports
-	@/bin/cp -f .shell/alias  		$(HOME)/.shell/alias
-	@/bin/cp -f .shell/fuctions 	$(HOME)/.shell/functions
+	@/bin/mkdir $(HOME_DIR)/.shells
+	@/bin/cp -f .bashrc          	$(HOME_DIR)/.bashrc
+	@/bin/cp -f .shells/exports    	$(HOME_DIR)/.shells/exports
+	@/bin/cp -f .shells/alias  		$(HOME_DIR)/.shells/alias
+	@/bin/cp -f .shells/functions 	$(HOME_DIR)/.shells/functions
 	@echo "Copying done."
 sex: 
 	@echo "Sorry, it's 'have sex', not 'make sex'."
