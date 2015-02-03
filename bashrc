@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-function extract()      # Handy Extract Program
+# Handy Extract Program
+function extract()      
 {
     if [ -f $1 ] ; then
         case $1 in
@@ -34,17 +35,20 @@ function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 # Create a ZIP archive of a file or folder.
 function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 
-function my_ip() # Get IP adress on ethernet.
+# Get IP adress on ethernet.
+function my_ip() 
 {
-    MY_IP=$(/sbin/ifconfig enp3s0 | awk '/inet/ { print $2 } ' | #maybe need to change interfacename here
+    MY_IP=$(/sbin/ip addr | awk '/inet/ { print $2 } ' | 
       sed -e s/addr://)
     echo ${MY_IP:-"Not connected"}
 }
 
-function mydf()         # Pretty-print of 'df' output.
-{                       # Inspired by 'dfc' utility.
-    for fs ; do
 
+# Pretty-print of 'df' output.
+# Inspired by 'dfc' utility.
+function mydf()         
+{                       
+    for fs ; do
         if [ ! -d $fs ]
         then
           echo -e $fs" :No such file or directory" ; continue
@@ -78,14 +82,24 @@ function ii()
     echo -e "\n${BRed}Memory stats :$NC " ; free
     echo -e "\n${BRed}Diskspace :$NC " ; mydf / $HOME
     echo -e "\n${BRed}Local IP Address :$NC" ; my_ip
-    echo -e "\n${BRed}Open connections :$NC "; netstat -pan --inet;
+    echo -e "\n${BRed}Open connections :$NC "; ss -s;
     echo
 }
 
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'"$*"'*' -ls ; }
 
+# List of handy alias
 alias ls='ls --color=auto'
-alias la='ls -al'
+alias la='ls -al --color=auto'
+alias lh='ls -d .* --color=auto'
+alias pacman='sudo pacman'
+alias fucking='sudo'
+alias reboot='sudo reboot'
+alias bc='bc -l'
+alias grep='grep --color=auto'
+alias cpuinfo='lscpu'
+alias burntbunch='ssh burntbunch.org'
+
 PS1='[\u@\h \W]\$ '
 archey
