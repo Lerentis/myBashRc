@@ -26,6 +26,10 @@ added functions:
 		Prints information of the host system
 	ff
 		improved find on home folder
+	revent
+		git hard reset to a given commit
+	commit
+		git commit -m 
 
 added alias:
 	alias ls='ls --color=auto'

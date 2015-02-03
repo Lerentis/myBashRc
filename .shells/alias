@@ -1,0 +1,11 @@
+# List of handy alias
+alias ls='ls --color=auto'
+alias la='ls -al --color=auto'
+alias lh='ls -d .* --color=auto'
+alias pacman='sudo pacman'
+alias fucking='sudo'
+alias reboot='sudo reboot'
+alias bc='bc -l'
+alias grep='grep --color=auto'
+alias cpuinfo='lscpu'
+alias burntbunch='ssh burntbunch.org'
