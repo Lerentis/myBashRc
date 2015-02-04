@@ -15,5 +15,5 @@ archey
 #Greeting
 echo -ne "Good Day,"; w -hs | cut -d " " -f1 | sort | uniq; 
 echo -ne "It's "; date '+%A, %B %-d %Y'
-echo -e "And now listen to the cow:"; 
-cowsay $(fortune);
+echo -e "The Weather today:"; 
+weather -m "51.4508,7.0131"
