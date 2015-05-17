@@ -1,0 +1,45 @@
+Just a little improvement to the default bashrc
+
+added functions:
+	extract
+		extracts :
+			.tar.bz2
+            .tar.gz
+            .bz2
+            .rar
+            .gz
+            .tar
+            .tbz2
+            .tgz
+            .zip
+            .Z
+            .7z
+	maketar
+		Creates an archive (*.tar.gz) from given directory.
+	makezip
+		Create a ZIP archive of a file or folder.
+	my_ip
+		Prints the hosts ipv4 and ipv6 adress
+	mydf
+		Pretty-print of 'df' output. Inspired by 'dfc' utility.
+	ii
+		Prints information of the host system
+	ff
+		improved find on home folder
+	revent
+		git hard reset to a given commit
+	commit
+		git commit -m 
+
+added alias:
+	alias ls='ls --color=auto'
+	alias la='ls -al --color=auto'
+	alias lh='ls -d .* --color=auto'
+	alias pacman='sudo pacman'
+	alias fucking='sudo'
+	alias reboot='sudo reboot'
+	alias bc='bc -l'
+	alias grep='grep --color=auto'
+	alias cpuinfo='lscpu'
+	alias burntbunch='ssh burntbunch.org'
+	alias push='git push'
