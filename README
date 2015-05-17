@@ -30,6 +30,8 @@ added functions:
 		git hard reset to a given commit
 	commit
 		git commit -m 
+	get_website
+		downloads a complete website recusive 
 
 added alias:
 	alias ls='ls --color=auto'
