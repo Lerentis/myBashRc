@@ -86,3 +86,9 @@ function ff() { find . -type f -iname '*'"$*"'*' -ls ; }
 function revert() { git reset --hard $1; }
 # Git Commit
 function commit() { git commit -m "$*" ;}
+#Git add
+function add()
+{
+ git add .;
+ git add -u;
+}
