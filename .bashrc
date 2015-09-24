@@ -16,4 +16,4 @@ archey
 echo -ne "Good Day,"; w -hs | cut -d " " -f1 | sort | uniq; 
 echo -ne "It's "; date '+%A, %B %-d %Y'
 echo -e "The Weather today:"; 
-weather -m "51.4508,7.0131"
+weather-report -m "51.4508,7.0131"
