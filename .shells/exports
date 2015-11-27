@@ -1,2 +1,2 @@
 #Handy exports
-export EDITOR='nano' ALTERNATE_EDITOR='vim' VISUAL='gedit'
+export EDITOR='nano' ALTERNATE_EDITOR='vim' VISUAL='subl3'

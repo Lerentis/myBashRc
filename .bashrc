@@ -10,7 +10,7 @@ source $HOME/.shells/exports
 source $HOME/.shells/alias
 
 PS1='[\u@\h \W]\$ '
-archey
+archey3
 
 #Greeting
 echo -ne "Good Day,"; w -hs | cut -d " " -f1 | sort | uniq; 
