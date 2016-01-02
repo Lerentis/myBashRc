@@ -144,3 +144,17 @@ function 4chan() {
         counter=$(($counter + 1))
     done
 }
+
+# Docker stop all container
+
+function docker_stop()
+{
+	docker stop $(docker ps -a -q)
+}
+
+# Docker remove all images
+
+function docker_remove()
+{
+	docker rm $(docker ps -a -q)
+}
