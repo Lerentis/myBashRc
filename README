@@ -32,6 +32,12 @@ added functions:
 		git commit -m 
 	add	
 		git add on all files in the directory
+	docker_stop
+		stops ALL running container instances
+	docker_remove
+		removes ALL not running containers
+	docker_rmi
+		removes all unused images
 
 added alias:
 	alias ls='ls --color=auto'
@@ -47,6 +53,11 @@ added alias:
 	alias push='git push'
 	alias docker_stop_all='sudo docker stop $(docker ps -a -q)'
 	alias docker_start_deamon='sudo docker daemon --ipv6 --fixed-cidr-v6="2001:db8:1::/64"'
+	alias emacs='emacs -nw'
+	alias weather='curl wttr.in/Bochum'
 
 Supports Fuck
 	https://github.com/nvbn/thefuck
+
+Depends on 
+	https://github.com/trapd00r/screenfo

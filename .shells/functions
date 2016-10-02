@@ -158,3 +158,8 @@ function docker_remove()
 {
 	docker rm $(docker ps -a -q)
 }
+
+function docker_rmi()
+{
+    docker images -q |xargs docker rmi
+}
