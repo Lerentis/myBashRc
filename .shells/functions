@@ -163,3 +163,8 @@ function docker_rmi()
 {
     docker images -q |xargs docker rmi
 }
+
+function svn_fame()
+{
+    svn ls -R | egrep -v -e "\/$" | xargs svn blame | awk '{print $2}' | sort | uniq -c | sort -r
+}
