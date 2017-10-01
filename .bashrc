@@ -5,18 +5,21 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 source $HOME/.shells/functions
 source $HOME/.shells/exports
 source $HOME/.shells/alias
 
-PS1='[\u@\h \W]\$ '
+color_my_prompt
+
 screenfo
 
 #Greeting
-echo -ne "Good Day,"; w -hs | cut -d " " -f1 | sort | uniq; 
-echo -ne "It's "; date '+%A, %B %-d %Y'
-#echo -e "The Weather today:"; 
-#weather-report -m "51.4508,7.0131"
+echo -ne "Good Day,"; whoami;
+echo -ne "It's "; date
 
 #Fuck
 eval $(thefuck --alias)

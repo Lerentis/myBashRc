@@ -1,21 +1,23 @@
 Just a little improvement to the default bashrc
 
 added functions:
+
 	extract
 		extracts :
 			.tar.bz2
-            .tar.gz
-            .bz2
-            .rar
-            .gz
-            .tar
-            .tbz2
-            .tgz
-            .zip
-            .Z
-            .7z
+			.tar.gz
+			.bz2
+			.rar
+			.gz
+			.tar
+			.tbz2
+			.tgz
+			.zip
+			.Z
+			.7z
+
 	maketar
-		Creates an archive (*.tar.gz) from given directory.
+		Creates an archive (.tar.gz) from given directory.
 	makezip
 		Create a ZIP archive of a file or folder.
 	my_ip
@@ -29,8 +31,8 @@ added functions:
 	revent
 		git hard reset to a given commit
 	commit
-		git commit -m 
-	add	
+		git commit -m
+	add
 		git add on all files in the directory
 	docker_stop
 		stops ALL running container instances
@@ -38,26 +40,40 @@ added functions:
 		removes ALL not running containers
 	docker_rmi
 		removes all unused images
+	svn_fame
+		like git fame just for svn
+	flash_avr
+		uses [c45b](https://github.com/bullestock/c45b) to flash a hex files
+	big_files
+		prints the 10 biggest files recursively in a directory
+	replace_spaces
+		replaces spaces in filenames with a -
+	lookup
+		dig + short
+
 
 added alias:
-	alias ls='ls --color=auto'
-	alias la='ls -al --color=auto'
-	alias lh='ls -d .* --color=auto'
+
+	alias ls='exa'
+	alias la='exa -alh --sort=created --group-directories-first'
+	alias lh='exa -d .* --color=auto'
 	alias pacman='sudo pacman'
 	alias fucking='sudo'
 	alias reboot='sudo reboot'
 	alias bc='bc -l'
 	alias grep='grep --color=auto'
 	alias cpuinfo='lscpu'
-	alias burntbunch='ssh burntbunch.org'
 	alias push='git push'
-	alias docker_stop_all='sudo docker stop $(docker ps -a -q)'
-	alias docker_start_deamon='sudo docker daemon --ipv6 --fixed-cidr-v6="2001:db8:1::/64"'
+	alias pull='git pull'
+	alias update='yaourt -Syua --noconfirm'
 	alias emacs='emacs -nw'
 	alias weather='curl wttr.in/Bochum'
 
-Supports Fuck
-	https://github.com/nvbn/thefuck
+Supports
+* https://github.com/nvbn/thefuck
+* https://github.com/gnunn1/tilix
+* https://github.com/zyedidia/micro
 
-Depends on 
-	https://github.com/trapd00r/screenfo
+Depends on
+* https://github.com/trapd00r/screenfo
+* https://github.com/ogham/exa

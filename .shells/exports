@@ -1,8 +1,11 @@
 #Handy exports
-export EDITOR='nano' ALTERNATE_EDITOR='vim' VISUAL='subl3'
+export EDITOR='micro' ALTERNATE_EDITOR='vim' VISUAL='atom'
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+PATH="/usr/bin/core_perl:$PATH"
 STEAM_RUNTIME=0
 QT_STYLE_OVERRIDE='gtk3'
 export GOPATH=~/go
 export PATH="$PATH:$GOPATH/bin"
 export XDG_CONFIG_HOME=$HOME
+export LC_ALL="en_US.UTF-8"
+export LP_PS1=""
