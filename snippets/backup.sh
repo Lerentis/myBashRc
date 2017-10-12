@@ -43,6 +43,6 @@ then
     exit 1
 fi
 
-rsync -qazPE --delete --delete-excluded --link-dest=$BACKUPDIR/current \
+rsync -qazcpPEA --delete --delete-excluded --link-dest=$BACKUPDIR/current \
     $SOURCEDIR/ $BACKUPDIR/back-$date/ \
     && rm -f $BACKUPDIR/current && ln -s $BACKUPDIR/back-$date $BACKUPDIR/current
