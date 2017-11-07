@@ -146,3 +146,13 @@ function color_my_prompt {
     local __git_dirty='`git rev-parse 2>/dev/null && (git diff --no-ext-diff --quiet --exit-code 2> /dev/null || echo -e \*)`'
     export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__git_dirty$__prompt_tail$__last_color "
 }
+
+function start_lab()
+{
+        vboxmanage startvm Node1 --type headless && vboxmanage startvm Node2 --type headless
+}
+
+function stop_lab()
+{
+        vboxmanage controlvm Node1 acpipowerbutton && vboxmanage controlvm Node2 acpipowerbutton
+}
