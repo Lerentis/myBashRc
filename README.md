@@ -65,6 +65,7 @@ added alias:
 	alias cpuinfo='lscpu'
 	alias push='git push'
 	alias pull='git pull'
+	alias gca='clustergit -p'
 	alias update='yaourt -Syua --noconfirm'
 	alias emacs='emacs -nw'
 	alias weather='curl wttr.in/Bochum'
