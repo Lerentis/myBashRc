@@ -1,8 +1,8 @@
 # Created by newuser for 5.4.2
 ZSH_THEME="tonotdo"
-source .shells/alias
-source .shells/functions
-source .shells/exports
+source ~/.shells/alias
+source ~/.shells/functions
+source ~/.shells/exports
 #Prompt
 setopt prompt_subst
 autoload -Uz colors && colors
@@ -74,7 +74,7 @@ function git_prompt_string() {
     [ -n "$git_where" ] && echo "[ $GIT_PROMPT_SYMBOL %{$reset_color%}${git_where#(refs/heads/|tags/)} $(parse_git_state)%{$reset_color%} ] "
 }
 
-PROMPT='%{$fg_bold[green]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m %{$fg_bold[blue]%}%4~%{$reset_color%} $(git_prompt_string)$(virtualenv_info)%# '
+PROMPT='%{$fg_bold[green]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m %{$fg_bold[blue]%}%4~%{$reset_color%} $(git_prompt_string)$(virtualenv_info)> '
 RPROMPT="%* [%{$fg_no_bold[green]%}%?%{$reset_color%}]"
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
