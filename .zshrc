@@ -74,15 +74,18 @@ function git_prompt_string() {
     [ -n "$git_where" ] && echo "[ $GIT_PROMPT_SYMBOL %{$reset_color%}${git_where#(refs/heads/|tags/)} $(parse_git_state)%{$reset_color%} ] "
 }
 
-PROMPT='%{$fg_bold[green]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m %{$fg_bold[blue]%}%4~%{$reset_color%} $(git_prompt_string)$(virtualenv_info)> '
+PROMPT='%{$fg_bold[grey]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m %{$fg_bold[blue]%}%4~%{$reset_color%} $(git_prompt_string)$(virtualenv_info)> '
 RPROMPT="%* [%{$fg_no_bold[green]%}%?%{$reset_color%}]"
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "\e[3~" delete-char
 
-SAVEHIST=50
+SAVEHIST=100
 HISTFILE=~/.zsh_history
 
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
 
 screenfo
 

@@ -1,5 +1,5 @@
 #Handy exports
-export EDITOR='micro' ALTERNATE_EDITOR='vim' VISUAL='atom'
+export EDITOR='micro' ALTERNATE_EDITOR='vim'
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 PATH="/usr/bin/core_perl:$PATH"
 STEAM_RUNTIME=0

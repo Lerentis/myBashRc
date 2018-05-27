@@ -147,12 +147,12 @@ function color_my_prompt {
     export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__git_dirty$__prompt_tail$__last_color "
 }
 
-function start_lab()
+function create_play()
 {
-        vboxmanage startvm Node1 --type headless && vboxmanage startvm Node2 --type headless
+	ansible-galaxy init $1
 }
 
-function stop_lab()
+function webserver()
 {
-        vboxmanage controlvm Node1 acpipowerbutton && vboxmanage controlvm Node2 acpipowerbutton
+	python -m http.server $1
 }
