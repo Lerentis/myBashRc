@@ -1,0 +1,102 @@
+wtf:
+  colors:
+    border:
+      focusable: darkslateblue
+      focused: orange
+      normal: gray
+  grid:
+    columns: [40, 40]
+    rows: [13, 13, 4]
+  refreshInterval: 1
+  mods:
+    clocks:
+      colors:
+        rows:
+          even: "lightblue"
+          odd: "white"
+      enabled: true
+      locations:
+        Avignon: "Europe/Paris"
+        Barcelona: "Europe/Madrid"
+        Dubai: "Asia/Dubai"
+        Vancouver: "America/Vancouver"
+        Toronto: "America/Toronto"
+        Essen: "Europe/Berlin"
+      position:
+        top: 0
+        left: 0
+        height: 1
+        width: 1
+      refreshInterval: 15
+      sort: "alphabetical"
+    security:
+      enabled: true
+      position:
+        top: 1
+        left: 0
+        height: 1
+        width: 1
+      refreshInterval: 3600
+    status:
+      enabled: true
+      position:
+        top: 2
+        left: 0
+        height: 1
+        width: 2
+      refreshInterval: 1
+    system:
+      enabled: true
+      position:
+        top: 0
+        left: 1
+        height: 1
+        width: 1
+      refreshInterval: 3600
+    textfile:
+      enabled: true
+      filePath: "~/.wtf/config.yml"
+      position:
+        top: 1
+        left: 1
+        height: 1
+        width: 1
+      refreshInterval: 30
+    git:
+      commitCount: 5
+      enabled: true
+      position:
+        top: 0
+        left: 2
+        height: 2
+        width: 3
+      refreshInterval: 8
+      repositories:
+      - "/home/lerentis/git/burntbunch/config"
+      - "/home/lerentis/git/burntbunch/design"
+    github:
+      enabled: true
+      position:
+        top: 2
+        left: 2
+        height: 2
+        width: 3
+      refreshInterval: 300
+      repositories:
+        myBashRc: "myBashRc"
+        ansible-docker: "ansible"
+    todo:
+      checkedIcon: "X"
+      colors:
+        checked: gray
+        highlight:
+          fore: "black"
+          back: "orange"
+      enabled: true
+      filename: "todo.yml"
+      position:
+        top: 3
+        left: 0
+        height: 1
+        width: 2
+      refreshInterval: 3600
