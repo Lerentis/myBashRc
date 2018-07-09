@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=SSH Launcher
+Exec=ssh.sh %u
+Terminal=false
+Type=Application
+Icon=utilities-terminal
+MimeType=x-scheme-handler/ssh
+Comment=Launch SSH
