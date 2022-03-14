@@ -1,4 +1,4 @@
-Just a little improvement to the default bashrc
+I switched to ZSH, so there is no bashrc anymore. Might still be usefull to some folks.
 
 added functions:
 
@@ -27,7 +27,7 @@ added functions:
 	ii
 		Prints information of the host system
 	ff
-		improved find on home folder
+		improved fuzzy find
 	revent
 		git hard reset to a given commit
 	commit
@@ -50,12 +50,18 @@ added functions:
 		replaces spaces in filenames with a -
 	lookup
 		dig + short
+	create_play
+		wrapper for ansible-galaxy init
+	webserver
+		starts a python webserver to server the current cirectory
+	sonar_settings
+		fullfills the requirements of sonarqube for local testing
 
 
 added alias:
 
 	alias ls='exa'
-	alias la='exa -alh --sort=created --group-directories-first'
+	alias la='exa -alh --group-directories-first'
 	alias lh='exa -d .* --color=auto'
 	alias pacman='sudo pacman'
 	alias fucking='sudo'
@@ -69,12 +75,19 @@ added alias:
 	alias update='yaourt -Syua --noconfirm'
 	alias emacs='emacs -nw'
 	alias weather='curl wttr.in/Bochum'
+	alias grv='TERM=xterm grv'
+	alias ip='ip -c -br add'
+	alias less='bat'
+	alias pub_ip='dig @resolver1.opendns.com A myip.opendns.com +short -4'
+	alias backup='sudo systemctl start restic-backup && sudo journalctl -fu restic-backup'
+	alias k='kubectl'
+	alias ka='kubectl get all'
 
 Supports
-* https://github.com/nvbn/thefuck
 * https://github.com/gnunn1/tilix
 * https://github.com/zyedidia/micro
+* https://github.com/pyenv/pyenv
 
 Depends on
-* https://github.com/trapd00r/screenfo
+* https://github.com/dylanaraps/neofetch
 * https://github.com/ogham/exa

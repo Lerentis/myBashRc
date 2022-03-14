@@ -1,17 +1,17 @@
 HOME_DIR=$(HOME)
 
 help:
-	@echo "bashrc" makefile
+	@echo "zshrc" makefile
 	@echo
 	@echo Options available:
 	@echo  "  % make 		display this help"
 	@echo
-	@echo  "  % make backup		take a backup of the original .bashrc"
-	@echo  "                        (it is saved as .bashrc.ORIGINAL)"
+	@echo  "  % make backup		take a backup of the original .zshrc"
+	@echo  "                        (it is saved as .zshrc.ORIGINAL)"
 	@echo  "                        you should run this once in the begining"
 	@echo  "                        otherwise you may overwrite the backup"
 	@echo
-	@echo  "  % make install	install the new .bashrc* files in"
+	@echo  "  % make install	install the new .zshrc* files in"
 	@echo  "                        the current directory"
 	@echo
 	@echo "The author does not take any responsibility" 
@@ -19,13 +19,13 @@ help:
 	@echo
 
 backup:
-	@test -f $(HOME)/.bashrc.ORIGINAL && echo "Backup already exists!" || echo -n ""
-	@test ! -f $(HOME)/.bashrc || cp $(HOME)/.bashrc $(HOME)/.bashrc.ORIGINAL
+	@test -f $(HOME)/.zshrc.ORIGINAL && echo "Backup already exists!" || echo -n ""
+	@test ! -f $(HOME)/.zshrc || cp $(HOME)/.zshrc $(HOME)/.zshrc.ORIGINAL
 
 install:
 	@echo "Copying config files to $(HOME)..."
 	@/bin/mkdir $(HOME_DIR)/.shells
-	@/bin/cp -f .bashrc          	$(HOME_DIR)/.bashrc
+	@/bin/cp -f .zshrc          	$(HOME_DIR)/.zshrc
 	@/bin/cp -f .shells/exports    	$(HOME_DIR)/.shells/exports
 	@/bin/cp -f .shells/alias  		$(HOME_DIR)/.shells/alias
 	@/bin/cp -f .shells/functions 	$(HOME_DIR)/.shells/functions

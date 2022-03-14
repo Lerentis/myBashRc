@@ -1,5 +1,4 @@
-# Created by newuser for 5.4.2
-ZSH_THEME="tonotdo"
+# Created by lerentis for 5.4.2
 source ~/.shells/alias
 source ~/.shells/functions
 source ~/.shells/exports
@@ -80,18 +79,26 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "\e[3~" delete-char
 
-SAVEHIST=100
+SAVEHIST=5000
 HISTFILE=~/.zsh_history
+
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+ eval `ssh-agent -s`
+ ssh-add ~/.ssh/id_rsa
+fi
 
 if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
 
-screenfo
+if command -v pyenv 1>/dev/null 2>&1; then  
+  eval "$(pyenv init -)"
+fi
+
+neofetch
 
 #Greeting
 echo -ne "Good Day,"; whoami; 
 echo -ne "It's "; date
 
-#Fuck
-eval $(thefuck --alias)
+autoload -U +X bashcompinit && bashcompinit
